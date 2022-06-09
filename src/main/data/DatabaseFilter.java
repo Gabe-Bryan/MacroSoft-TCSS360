@@ -3,7 +3,11 @@ package main.data;
 import java.util.ArrayList;
 import java.util.List;
 
-
+/**
+ * Filter for the database object
+ *
+ *
+ */
 public class DatabaseFilter {
 
     /**

@@ -4,6 +4,13 @@ import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+/**
+ * DatabaseView class
+ *
+ *
+ * @author Alex Larsen
+ * @version Spring 2022
+ */
 public class DatabaseView {
     private Database database;
     private DatabaseFilter filter;
@@ -35,6 +42,9 @@ public class DatabaseView {
         filterByTags();
     }
 
+    /**
+     * filter the DatabaseFilter by using name
+     */
     private void filterByName() {
         String[] nameFilters = filter.getNameFilters();
         if (items.isEmpty())
@@ -53,6 +63,9 @@ public class DatabaseView {
         }
     }
 
+    /**
+     * filter the databasefilter by using fuzzy name
+     */
     private void filterByNameFuzzy() {
         String[] nameFilters = filter.getNameFilters();
         if (items.isEmpty())
@@ -74,6 +87,9 @@ public class DatabaseView {
         }
     }
 
+    /**
+     * filter the databasefilter using tag
+     */
     private void filterByTags() {
         String[] tagFilters = filter.getTagFilters();
         if (items.isEmpty())
@@ -92,6 +108,10 @@ public class DatabaseView {
         }
     }
 
+    /**
+     * getter of the item
+     * @return
+     */
     public Item[] getItems() {
         retrieve();
 
