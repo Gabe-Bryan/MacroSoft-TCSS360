@@ -23,7 +23,8 @@ public class Database {
      */
     public Database(String workingDir) {
         this.workingDir = workingDir;
-        items = new ArrayList<Item>();
+        this.items = new ArrayList<Item>();
+        this.tags = new ArrayList<String>();
     }
 
     /*
@@ -184,7 +185,7 @@ public class Database {
     }
 
     public void addTag(String theTag) {
-        if(hasTag(theTag))
+        if (!hasTag(theTag))
             tags.add(theTag.toLowerCase());
     }
 
