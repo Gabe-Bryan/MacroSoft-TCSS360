@@ -1,9 +1,10 @@
 package main.data;
 
+import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class DatabaseTest {
-    private final string test_dir = "/test_dir/";
+    private final String test_dir = "/test_dir/";
 
     public DatabaseTest() {
 

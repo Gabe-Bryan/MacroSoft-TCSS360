@@ -1,7 +1,7 @@
 package main.data;
 
+import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
-import static org.junit.Assert.*;
 
 class ItemFileTest {
     @Test
@@ -22,7 +22,7 @@ class ItemFileTest {
 
         ItemFile file = new ItemFile(name, path);
 
-        assetEquals(file.toString(), name);
+        assertEquals(file.toString(), name);
     }
 
 }
