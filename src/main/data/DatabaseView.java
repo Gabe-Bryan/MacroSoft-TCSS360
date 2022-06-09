@@ -10,11 +10,20 @@ public class DatabaseView {
 
     private ArrayList<Item> items;
 
+    /**
+     * Constructor
+     * @param database the database of the application
+     * @param filter the filter of the database
+     */
     public DatabaseView(Database database, DatabaseFilter filter) {
         this.database = database;
         this.filter = filter;
     }
 
+    /**
+     * initialize the member items by getting the item list from
+     * the database and set the filter
+     */
     private void retrieve() {
         items = new ArrayList<Item>(Arrays.asList(database.getItems()));
 

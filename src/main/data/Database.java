@@ -27,7 +27,7 @@ public class Database {
         this.tags = new ArrayList<String>();
     }
 
-    /*
+    /**
      * Constructor
      *
      * @param json a JSON object that represents the database
