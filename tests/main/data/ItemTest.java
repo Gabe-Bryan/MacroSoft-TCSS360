@@ -1,8 +1,6 @@
 package main.data;
 
-import java.io.File;
-import static org.junit.Assert.*;
-import static org.junit.Assert.*;
+import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class ItemTest {
@@ -22,13 +20,15 @@ class ItemTest {
     public void testGetters() {
         String testName = "Test Name";
         String testDescription = "Test Description";
-        String[] testTags = { "", "" };
+        String[] testTags = { "tagA", "tagB" };
 
         Item item = new Item(test_db, testName, testTags, testDescription);
 
         assertEquals(item.getName(), testName);
         assertEquals(item.getDescription(), testDescription);
-        assertEquals(item.getTags(), testTags);
+        assertEquals(item.getTags().length, testTags.length);
+        for (int i = 0; i < item.getTags().length; i++)
+            assertEquals(item.getTags()[i], testTags[i]);
     }
 
     @Test
