@@ -343,7 +343,7 @@ public class InsertDocument extends Tab {
                 errormsg.setText("File does not exist!");
                 SuccessMsg.setVisible(false);
                 errormsg.setVisible(true);
-            }else if(selectItem.hasFilePath(myFile.getPath())){
+            }else if(selectItem.hasFile(myFile.getName())){
                 errormsg.setText("File already Exist!");
                 SuccessMsg.setVisible(false);
                 errormsg.setVisible(true);
